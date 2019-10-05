@@ -17,13 +17,13 @@
             <img src="Assets/node.png" id="node">
         </a-assets>
 
-        <a-sky color="blue"></a-sky>
+        <a-sky color="#474448"></a-sky>
 
         <!-- MODELO DO QUARTO -->
         <a-entity gltf-model="/Assets/Models/bedroom/bed.gltf" position="0 0 3" scale=".2 .2 .2"></a-entity>
 
         <!-- CAMERA -->
-        <a-entity id="camera" movement-controls position="0 0 2" rotation="0 90 0">
+        <a-entity id="camera" movement-controls position="0 0.5 2" rotation="0 90 0">
             <a-camera look-controls active="true">
                 <!-- progress bar -->
                 <a-gui-cursor id="cursor" raycaster="objects: .movNode, .button" fuse="true" fuse-timeout="1500" distance="-1"
@@ -36,7 +36,7 @@
         <a-cylinder id="nodeBed" class="movNode" src="#node" color="#000000" transparent="true"
             height="1" radius=".2" open-ended="true" position="0 .6 2"
             animation="property: opacity; to: .5; from: 1; dur:800; loop:true; dir: alternate"
-            onclick="moveTo(0, 0, 2)">
+            onclick="moveTo(0, 0.5, 2)">
             <a-torus rotation="90 0 0" radius=".1" radius-tubular="0.005" position="0 -.5 0" color="#000"></a-torus>
         </a-cylinder>
 
@@ -44,7 +44,7 @@
         <a-cylinder id="nodeTv" class="movNode" src="#node" color="#000000" transparent="true"
             height="1" radius=".2" open-ended="true" position="-2.3 .6 2"
             animation="property: opacity; to: .5; from: 1; dur:800; loop:true; dir: alternate"
-            onclick="moveTo(-2.3, 0, 2)">
+            onclick="moveTo(-2.3, 0.5, 2)">
             <a-torus rotation="90 0 0" radius=".1" radius-tubular="0.005" position="0 -.5 0" color="#000"></a-torus>
         </a-cylinder>
 
@@ -52,7 +52,7 @@
         <a-cylinder id="nodeDesk" class="movNode" src="#node" color="#000000" transparent="true"
             height="1" radius=".2" open-ended="true" position="-2.3 .6 -.2"
             animation="property: opacity; to: .5; from: 1; dur:800; loop:true; dir: alternate"
-            onclick="moveTo(-2.3, 0, -0.2)">
+            onclick="moveTo(-2.3, 0.5, -0.2)">
             <a-torus rotation="90 0 0" radius=".1" radius-tubular="0.005" position="0 -.5 0" color="#000"></a-torus>
         </a-cylinder>
 
@@ -60,20 +60,20 @@
         <a-cylinder id="nodeDesk" class="movNode" src="#node" color="#000000" transparent="true"
             height="1" radius=".2" open-ended="true" position="0 .6 0"
             animation="property: opacity; to: .5; from: 1; dur:800; loop:true; dir: alternate"
-            onclick="moveTo(0, 0, 0)">
+            onclick="moveTo(0, 0.5, 0)">
             <a-torus rotation="90 0 0" radius=".1" radius-tubular="0.005" position="0 -.5 0" color="#000"></a-torus>
         </a-cylinder>
 
         <!-- MODELO ARMARIO -->
         <!-- <a-entity gltf-model="/Assets/Models/armario/model.gltf" position="0.6 -2.1 -0.3" rotation="0 -90 0" scale="1 1.5 1"></a-entity> -->
         <a-box position="1.1 1.5 0" height="0.05" depth="2" width="0.3" color="#4b240b">
-            <a-entity gltf-model="/Assets/Models/book_blue/model.gltf" rotation="-5 -90 0" scale="0.75 0.75 0.75" position="-0.669 -0.45 0.5">
+            <a-entity class="button" onclick="openBook(0)" gltf-model="/Assets/Models/book_blue/model.gltf" rotation="-5 -90 0" scale="0.75 0.75 0.75" position="-0.669 -0.45 0.5">
                 <a-text color="#000000" align="center" anchor="center" value="MODELAGEM 3D" position="0 1 -0.8" width="1"></a-text>
             </a-entity>
-            <a-entity gltf-model="/Assets/Models/book_red/model.gltf" rotation="-5 -90 0" scale="0.75 0.75 0.75" position="-0.669 -0.45 0">
+            <a-entity class="button" onclick="openBook(1)" gltf-model="/Assets/Models/book_red/model.gltf" rotation="-5 -90 0" scale="0.75 0.75 0.75" position="-0.669 -0.45 0">
                 <a-text color="#000000" align="center" anchor="center" value="GAME DESIGN" position="0 1 -0.8" width="1"></a-text>
             </a-entity>
-            <a-entity gltf-model="/Assets/Models/book_yellow/model.gltf" rotation="-5 -90 0" scale="0.75 0.75 0.75" position="-0.669 -0.45 -0.5">
+            <a-entity class="button" onclick="openBook(2)" gltf-model="/Assets/Models/book_yellow/model.gltf" rotation="-5 -90 0" scale="0.75 0.75 0.75" position="-0.669 -0.45 -0.5">
                 <a-text color="#000000" align="center" anchor="center" value="TECNOLOGIA\n EM JOGOS\nDIGITAIS" position="0 1 -0.8" width="1"></a-text>
             </a-entity>
         </a-box>
