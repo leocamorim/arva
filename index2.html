@@ -36,7 +36,7 @@
         <a-cylinder id="nodeBed" class="movNode" src="#node" color="#000000" transparent="true"
             height="1" radius=".2" open-ended="true" position="0 .6 2"
             animation="property: opacity; to: .5; from: 1; dur:800; loop:true; dir: alternate"
-            onclick="moveTo(0, 0, 1.8)">
+            onclick="moveTo(0, 0, 2)">
             <a-torus rotation="90 0 0" radius=".1" radius-tubular="0.005" position="0 -.5 0" color="#000"></a-torus>
         </a-cylinder>
 
@@ -67,7 +67,9 @@
         <!-- MODELO ARMARIO -->
         <!-- <a-entity gltf-model="/Assets/Models/armario/model.gltf" position="0.6 -2.1 -0.3" rotation="0 -90 0" scale="1 1.5 1"></a-entity> -->
         <a-box position="1.1 1.5 0" height="0.05" depth="2" width="0.3" color="#4b240b">
-            <a-entity gltf-model="/Assets/Models/book_blue/model.gltf" rotation="-5 -90 0" position="-0.99 -0.6 0"></a-entity>
+            <a-entity gltf-model="/Assets/Models/book_blue/model.gltf" rotation="-5 -90 0" scale="0.75 0.75 0.75" position="-0.669 -0.45 0.5"></a-entity>
+            <a-entity gltf-model="/Assets/Models/book_red/model.gltf" rotation="-5 -90 0" scale="0.75 0.75 0.75" position="-0.669 -0.45 0"></a-entity>
+            <a-entity gltf-model="/Assets/Models/book_yellow/model.gltf" rotation="-5 -90 0" scale="0.75 0.75 0.75" position="-0.669 -0.45 -0.5"></a-entity>
         </a-box>
 
         <!-- SCRIPT -->
