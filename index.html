@@ -22,7 +22,7 @@
         <a-sky color="blue"></a-sky>
 
         <!-- CAMERA -->
-        <a-entity id="camera" movement-controls position="0 0 1.8" rotation="0 90 0">
+        <a-entity id="camera" movement-controls position="-3 0.5 1.8" rotation="0 90 0">
             <a-camera look-controls active="true">
                 <!-- progress bar -->
                 <a-gui-cursor id="cursor" raycaster="objects: .movNode, .button" fuse="true" fuse-timeout="1500"
@@ -35,13 +35,21 @@
         <a-cylinder id="nodeChair1" class="movNode" src="#node" color="#000000" transparent="true"
             height="1" radius=".2" open-ended="true" position="0 .6 1.8"
             animation="property: opacity; to: .5; from: 1; dur:800; loop:true; dir: alternate"
-            event-set__click="_event: click; _target: #camera; position: 0 0 2;">
+            event-set__click="_event: click; _target: #camera; position: 0 0 1.8;">
             <a-torus rotation="90 0 0" radius=".1" radius-tubular="0.005" position="0 -.5 0" color="#000"></a-torus>
         </a-cylinder>
 
         <!-- MODELO DA CLASSE -->
         <a-entity gltf-model="/Assets/Models/classroom/model.gltf"></a-entity>
-        <!-- <a-obj-model src="#classroom-obj" mtl="#classroom-mtl" position="0 0 0"></a-entity> -->
+        <!-- <a-obj-model src="/Assets/Models/classroom/sala.obj" mtl="/Assets/Models/classroom/sala.mtl" position="0 0 0"></a-entity> -->
+        
+        <!-- PAPEL DE PAREDE -->
+        <a-plane color="#8BEBFF" height="2" width="2" scale="3.11 1.6 1" position="-4.471 1.665 1.745" rotation="0 90 0"></a-plane>
+        <!-- FIM PAPEL DE PAREDE -->
+
+        <a-plane color="#000" height="2" width="2" position="-4.325 2.02 1.18" rotation="0 90 0"></a-plane>
+
+
 
         <!-- SCRIPT -->
         <script src="/Js/main.js"></script>
