@@ -1,0 +1,25 @@
+{
+  "name": "arva",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leocamorim/arva.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leocamorim/arva/issues"
+  },
+  "homepage": "https://github.com/leocamorim/arva#readme",
+  "dependencies": {
+    "aframe": "^0.9.2",
+    "aframe-extras": "^6.0.1",
+    "vue": "^2.6.10",
+    "vue-cli": "^2.9.6"
+  }
+}
