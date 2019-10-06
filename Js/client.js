@@ -1,4 +1,4 @@
-var client = deepstream('10.10.130.29:8080/')
+var client = deepstream('localhost:1337/')
 client.login({}, function (success,data) {
 	if(success){
 		startApp(data)
