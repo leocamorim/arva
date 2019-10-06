@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>A.R.V.A</title>
-    <script src="https://cdn.deepstream.io/js/client/latest/ds.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/web-socket-js/1.0.0/web_socket.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/web-socket-js/1.0.0/web_socket.min.js"></script> -->
     <script src="/node_modules/aframe/dist/aframe-master.min.js"></script>
     <script src="/node_modules/aframe-extras/dist/aframe-extras.min.js"></script>
     <script src="/node_modules/aframe-event-set-component/dist/aframe-event-set-component.min.js"></script>
@@ -30,8 +29,8 @@
                     design="ring">
                 </a-gui-cursor>
             </a-camera>
-            <a-entity sphere-collider="objects: a-box" super-hands hand-controls="left"></a-entity>
-            <a-entity sphere-collider="objects: a-box" super-hands hand-controls="right"></a-entity>
+            <a-entity id="lhand" sphere-collider="objects: a-box" super-hands color="#f2c280" hand-controls="left"></a-entity>
+            <a-entity id="rhand" sphere-collider="objects: a-box" super-hands color="#f2c280" hand-controls="right"></a-entity>
         </a-entity>
 
         <!-- NODE MAIN CHAIR -->
@@ -105,7 +104,7 @@
 
         <!-- SCRIPT -->
         <script src="/Js/main.js"></script>
-        <script src="/Js/client.js"></script>
+        <!-- <script src="/Js/client.js"></script> -->
         
     </a-scene>
 </body>

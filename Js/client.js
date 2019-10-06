@@ -1,11 +1,31 @@
-var client = deepstream('fd96b.sse.codesandbox.io')
-client.login({}, function (success,data) {
-	if(success){
-		startApp(data)
-	}else{
-	    //handle login failed
-	}
-})
+var ws = new WebSocket("ws://8p5o7.sse.codesandbox.io");
+
+ws.onopen = function() {
+    ws.send("Hello");
+  };
+  ws.onmessage = function(e) {
+    // Receives a message.
+    console.log(JSON.parse(e.data));
+    let data = {
+        camera: {
+            position: camera.attributes.position ? camera.attributes.position.value : null,
+            rotation: camera.attributes.rotation ? camera.attributes.rotation.value : null
+        },
+        lhand: {
+            position: lhand.attributes.position ? lhand.attributes.position.value : null,
+            rotation: lhand.attributes.rotation ? lhand.attributes.rotation.value : null
+        },
+        rhand: {
+            position: rhand.attributes.position ? rhand.attributes.position.value : null,
+            rotation: rhand.attributes.rotation ? rhand.attributes.rotation.value : null
+        }
+    }
+    console.log(data)
+    ws.send(JSON.stringify({type: "position", data: data}));
+  };
+  ws.onclose = function() {
+    alert("closed");
+  };
 
 function startApp(data){
   
