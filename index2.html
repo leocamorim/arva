@@ -23,7 +23,7 @@
         <a-entity gltf-model="/Assets/Models/bedroom/bed.gltf" position="0 0 3" scale=".2 .2 .2"></a-entity>
 
         <!-- CAMERA -->
-        <a-entity id="camera" movement-controls position="0 0.25 2" rotation="0 90 0">
+        <a-entity id="camera" movement-controls position="-0.548 0.25 -1.158" rotation="0 180 0">
             <a-camera look-controls active="true">
                 <!-- progress bar -->
                 <a-gui-cursor id="cursor" raycaster="objects: .movNode, .button" fuse="true" fuse-timeout="1500" distance="-1"
@@ -66,7 +66,7 @@
 
         <!-- NODE GOTO SALA DE AULA -->
         <a-cylinder id="nodeSalaDeAula" class="movNode" src="#node" color="#000000" transparent="true"
-            height="1" radius=".2" open-ended="true" position="-0.548 0.6 -1.158;"
+            height="1" radius=".2" open-ended="true" position="-0.548 0.6 -1.158"
             animation="property: opacity; to: .5; from: 1; dur:800; loop:true; dir: alternate"
             onclick="location.href='index.html'">
             <a-torus rotation="90 0 0" radius=".1" radius-tubular="0.005" position="0 -.5 0" color="#000"></a-torus>
