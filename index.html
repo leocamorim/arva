@@ -21,7 +21,7 @@
         <a-sky color="#474448"></a-sky>
 
         <!-- CAMERA -->
-        <a-entity id="camera" movement-controls position="-3 0.5 1.8" rotation="0 90 0">
+        <a-entity id="camera" movement-controls position="-2.503 0.5 -0.658" rotation="0 180 0">
             <a-camera look-controls active="true">
                 <!-- progress bar -->
                 <a-gui-cursor id="cursor" raycaster="objects: .movNode, .button" fuse="true" fuse-timeout="1500"
@@ -75,6 +75,7 @@
             onclick="moveTo(-3.87, 0.6, 2.96)">
             <a-torus rotation="90 0 0" radius=".1" radius-tubular="0.005" position="0 -.5 0" color="#000"></a-torus>
         </a-cylinder>
+
         <!-- PLANE DOOR LEAVE -->
         <a-plane class="button" onclick="location.href='index2.html'" visible="false" width="1.15" height="2.8" position="-2.55 1 -1.2"></a-plane>
 

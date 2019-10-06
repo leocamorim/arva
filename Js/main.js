@@ -16,6 +16,7 @@ function changeAva(_aux) {
 
 function openBook (materia) {
     location.href='index.html?materia='+materia;
+  document.getElementById('ava-plane').setAttribute('src', '#ava-'+_aux)
 }
 
 function getParams() {
