@@ -10,6 +10,7 @@
     <script src="/node_modules/aframe-extras/dist/aframe-extras.min.js"></script>
     <script src="/node_modules/aframe-event-set-component/dist/aframe-event-set-component.min.js"></script>
     <script src="/node_modules/aframe-gui/dist/aframe-gui.min.js"></script>
+    <script src="/node_modules/super-hands/dist/super-hands.min.js"></script>
 </head>
 
 <body>
@@ -29,6 +30,8 @@
                     design="ring">
                 </a-gui-cursor>
             </a-camera>
+            <a-entity sphere-collider="objects: a-box" super-hands hand-controls="left"></a-entity>
+            <a-entity sphere-collider="objects: a-box" super-hands hand-controls="right"></a-entity>
         </a-entity>
 
         <!-- NODE MAIN CHAIR -->

@@ -1,4 +1,4 @@
-var client = deepstream('localhost:1337/')
+var client = deepstream('fd96b.sse.codesandbox.io')
 client.login({}, function (success,data) {
 	if(success){
 		startApp(data)

@@ -5,8 +5,6 @@ var webSocketServer = require('websocket').server;
 var http = require('http');/**
  * Global variables
  */
-// latest 100 messages
-var history = [ ];
 // list of currently connected clients (users)
 var clients = [ ];/**
  * Helper function for escaping input strings
