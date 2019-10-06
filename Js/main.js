@@ -8,6 +8,10 @@ function moveTo(x, y, z) {
     camera.object3D.position.set(x, y, z);
 }
 
+function changeAva(_aux) {
+  document.getElementById('ava-plane').setAttribute('src', '#ava-'+_aux)
+}
+
 function getParams() {
     var pairs = window.location.search.substring(1).split("&"),
       obj = {},

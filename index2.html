@@ -14,7 +14,12 @@
     <a-scene>
 
         <a-assets>
-            <img src="Assets/node.png" id="node">
+            <img src="/Assets/node.png" id="node">
+            <img src="/Assets/Imagens/PRINT_HOME.png" id="ava-home">
+            <img src="/Assets/Imagens/PRINT_NOTAS.png" id="ava-notas">
+            <img src="/Assets/Imagens/PRINT_NOVIDADES.png" id="ava-novidades">
+            <img src="/Assets/Imagens/PRINT_FREQUENCIA.png" id="ava-frequencia">
+            <img src="/Assets/Imagens/PRINT_conteudo.png" id="ava-conteudo">
         </a-assets>
 
         <a-sky color="#474448"></a-sky>
@@ -23,6 +28,7 @@
         <a-entity gltf-model="/Assets/Models/bedroom/bed.gltf" position="0 0 3" scale=".2 .2 .2"></a-entity>
 
         <!-- CAMERA -->
+        <!-- <a-entity id="camera" movement-controls position="-2.3 0.25 2.1" rotation="-10 90 0"> -->
         <a-entity id="camera" movement-controls position="-0.548 0.25 -1.158" rotation="0 180 0">
             <a-camera look-controls active="true">
                 <!-- progress bar -->
@@ -42,9 +48,9 @@
 
         <!-- NODE TV -->
         <a-cylinder id="nodeTv" class="movNode" src="#node" color="#000000" transparent="true"
-            height="1" radius=".2" open-ended="true" position="-2.3 .6 2"
+            height="1" radius=".2" open-ended="true" position="-2.3 .6 2.1"
             animation="property: opacity; to: .5; from: 1; dur:800; loop:true; dir: alternate"
-            onclick="moveTo(-2.3, 0.25, 2)">
+            onclick="moveTo(-2.3, 0.25, 2.1)">
             <a-torus rotation="90 0 0" radius=".1" radius-tubular="0.005" position="0 -.5 0" color="#000"></a-torus>
         </a-cylinder>
 
@@ -85,6 +91,15 @@
                 <a-text color="#000000" align="center" anchor="center" value="TECNOLOGIA\n EM JOGOS\nDIGITAIS" position="0 1 -0.8" width="1"></a-text>
             </a-entity>
         </a-box>
+
+        <!-- PLANE TV -->
+        <a-image id="ava-plane" position="-3.92 1.56 2.11" rotation="0 90 0" scale="1.99 1.1 1" src="#ava-home">
+            <a-plane onclick="changeAva('home')" class="button" visible="false" scale="0.09 0.13 1" position="-0.227 0.287 0.1"></a-plane>
+            <a-plane onclick="changeAva('novidades')" class="button" visible="false" scale="0.09 0.13 1" position="-0.13 0.287 0.1"></a-plane>
+            <a-plane onclick="changeAva('conteudo')" class="button" visible="false" scale="0.09 0.13 1" position="0 0.287 0.1"></a-plane>
+            <a-plane onclick="changeAva('notas')" class="button" visible="false" scale="0.09 0.13 1" position="0.115 0.287 0.1"></a-plane>
+            <a-plane onclick="changeAva('frequencia')" class="button" visible="false" scale="0.09 0.13 1" position="0.227 0.287 0.1"></a-plane>
+        </a-image>
 
         <!-- SCRIPT -->
         <script src="/Js/main.js"></script>
