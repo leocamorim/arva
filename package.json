@@ -21,6 +21,7 @@
     "aframe-event-set-component": "^5.0.0",
     "aframe-extras": "^6.0.1",
     "aframe-gui": "^0.3.8",
+    "http-server": "^0.11.1",
     "vue": "^2.6.10",
     "vue-cli": "^2.9.6"
   }
