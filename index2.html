@@ -57,10 +57,18 @@
         </a-cylinder>
 
         <!-- NODE ARMARIO -->
-        <a-cylinder id="nodeDesk" class="movNode" src="#node" color="#000000" transparent="true"
+        <a-cylinder id="nodeArmario" class="movNode" src="#node" color="#000000" transparent="true"
             height="1" radius=".2" open-ended="true" position="0 .6 0"
             animation="property: opacity; to: .5; from: 1; dur:800; loop:true; dir: alternate"
             onclick="moveTo(0, 0.25, 0)">
+            <a-torus rotation="90 0 0" radius=".1" radius-tubular="0.005" position="0 -.5 0" color="#000"></a-torus>
+        </a-cylinder>
+
+        <!-- NODE GOTO SALA DE AULA -->
+        <a-cylinder id="nodeSalaDeAula" class="movNode" src="#node" color="#000000" transparent="true"
+            height="1" radius=".2" open-ended="true" position="-0.548 0.6 -1.158;"
+            animation="property: opacity; to: .5; from: 1; dur:800; loop:true; dir: alternate"
+            onclick="location.href='index.html'">
             <a-torus rotation="90 0 0" radius=".1" radius-tubular="0.005" position="0 -.5 0" color="#000"></a-torus>
         </a-cylinder>
 
