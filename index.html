@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>A.R.V.A</title>
+    <script src="https://cdn.deepstream.io/js/client/latest/ds.min.js"></script>
     <script src="/node_modules/aframe/dist/aframe-master.min.js"></script>
     <script src="/node_modules/aframe-extras/dist/aframe-extras.min.js"></script>
     <script src="/node_modules/aframe-event-set-component/dist/aframe-event-set-component.min.js"></script>
@@ -17,7 +18,7 @@
             <img src="Assets/node.png" id="node">
         </a-assets>
 
-        <a-sky color="blue"></a-sky>
+        <a-sky color="#474448"></a-sky>
 
         <!-- CAMERA -->
         <a-entity id="camera" movement-controls position="-3 0.5 1.8" rotation="0 90 0">
@@ -74,13 +75,8 @@
             onclick="moveTo(-3.87, 0.6, 2.96)">
             <a-torus rotation="90 0 0" radius=".1" radius-tubular="0.005" position="0 -.5 0" color="#000"></a-torus>
         </a-cylinder>
-        <!-- NODE GOTO QUARTO -->
-        <a-cylinder id="nodeQuarto" class="movNode" src="#node" color="#000000" transparent="true"
-            height="1" radius=".2" open-ended="true" position="-2.503 0.6 -0.658;"
-            animation="property: opacity; to: .5; from: 1; dur:800; loop:true; dir: alternate"
-            onclick="location.href='index2.html'">
-            <a-torus rotation="90 0 0" radius=".1" radius-tubular="0.005" position="0 -.5 0" color="#000"></a-torus>
-        </a-cylinder>
+        <!-- PLANE DOOR LEAVE -->
+        <a-plane class="button" onclick="location.href='index2.html'" visible="false" width="1.15" height="2.8" position="-2.55 1 -1.2"></a-plane>
 
         <!-- MODELO DA CLASSE -->
         <a-entity gltf-model="/Assets/Models/classroom/model.gltf"></a-entity>
@@ -97,8 +93,14 @@
         <a-entity class="button" onclick="changeSlide(-1)" gltf-model="/Assets/Models/controle_slide/model.gltf" position="-2.958 1.120 3.35" scale="0.07 0.07 0.07" rotation="0 225 0"></a-entity>
         <!-- FIM SLIDE -->
 
+        <!-- PERSONAGEM -->
+        <a-mixin id="eye" geometry="primitive: sphere; radius: 0.2" material="shader: flat; side: double; color: #FFF"></a-mixin>
+        <a-mixin id="pupil" geometry="primitive: sphere; radius: 0.05" material="shader: flat; side: double; color: #222"></a-mixin>
+        <a-mixin id="arm" geometry="primitive: box; depth: 0.2; height: 1.5; width: 0.2" material="color: #222; shader: flat"></a-mixin>
+
         <!-- SCRIPT -->
         <script src="/Js/main.js"></script>
+        <!-- <script src="/Js/client.js"></script> -->
         
     </a-scene>
 </body>

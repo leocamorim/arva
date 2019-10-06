@@ -1,11 +1,21 @@
 // import { cursorTo } from "readline";
 
 // const camera = document.getElementById('camera')
-let slideNumber = 0;
+
+let slideNumber = 1;
 let params = getParams();
+changeSlide(0);
 
 function moveTo(x, y, z) {
     camera.object3D.position.set(x, y, z);
+}
+
+function changeAva(_aux) {
+    document.getElementById('ava-plane').setAttribute('src', '#ava-'+_aux)
+}
+
+function openBook (materia) {
+    location.href='index.html?materia='+materia;
 }
 
 function getParams() {
@@ -49,11 +59,11 @@ function getParams() {
 // })
 
 function changeSlide(diference) {
-    if ((diference < 0 && slideNumber >=1) || (diference > 0 && slideNumber < 6)) {
-        if(!params.materia) params.materia = "Slide";
+    if ((diference < 0 && slideNumber >1) || (diference => 0 && slideNumber < 6)) {
+        if(!params.materia) params.materia = "Apresentacao";
         slideNumber += diference;
         document.getElementById("computerImage").setAttribute("color", "");
-        document.getElementById("computerImage").setAttribute("src", "Assets/Imagens/"+params.materia+slideNumber+".PNG");
-        document.getElementById("slideImage").setAttribute("src", "Assets/Imagens/"+params.materia+slideNumber+".PNG");
+        document.getElementById("computerImage").setAttribute("src", "Assets/Imagens/Slides/"+params.materia+"/Slide"+slideNumber+".PNG");
+        document.getElementById("slideImage").setAttribute("src", "Assets/Imagens/Slides/"+params.materia+"/Slide"+slideNumber+".PNG");
     }
 }
