@@ -22,6 +22,7 @@
     "aframe-extras": "^6.0.1",
     "aframe-gui": "^0.3.8",
     "http-server": "^0.11.1",
+    "super-hands": "^3.0.0",
     "vue": "^2.6.10",
     "vue-cli": "^2.9.6",
     "websocket": "^1.0.30"

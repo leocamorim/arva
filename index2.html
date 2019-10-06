@@ -8,6 +8,7 @@
     <script src="/node_modules/aframe-extras/dist/aframe-extras.min.js"></script>
     <script src="/node_modules/aframe-event-set-component/dist/aframe-event-set-component.min.js"></script>
     <script src="/node_modules/aframe-gui/dist/aframe-gui.min.js"></script>
+    <script src="/node_modules/super-hands/dist/super-hands.min.js"></script>
 </head>
 
 <body>
@@ -36,6 +37,8 @@
                     design="ring">
                 </a-gui-cursor>
             </a-camera>
+            <a-entity sphere-collider="objects: a-box" super-hands hand-controls="left"></a-entity>
+            <a-entity sphere-collider="objects: a-box" super-hands hand-controls="right"></a-entity>
         </a-entity>
 
         <!-- NODE BED -->
@@ -80,6 +83,8 @@
 
         <!-- MODELO ARMARIO -->
         <!-- <a-entity gltf-model="/Assets/Models/armario/model.gltf" position="0.6 -2.1 -0.3" rotation="0 -90 0" scale="1 1.5 1"></a-entity> -->
+
+        <!-- SHELF -->
         <a-box position="1.1 1.5 0" height="0.05" depth="2" width="0.3" color="#4b240b">
             <a-entity class="button" onclick="openBook('Modelagem3D')" gltf-model="/Assets/Models/book_blue/model.gltf" rotation="-5 -90 0" scale="0.75 0.75 0.75" position="-0.669 -0.45 0.5">
                 <a-text color="#000000" align="center" anchor="center" value="MODELAGEM 3D" position="0 1 -0.8" width="1"></a-text>
@@ -100,6 +105,9 @@
             <a-plane onclick="changeAva('notas')" class="button" visible="false" scale="0.09 0.13 1" position="0.115 0.287 0.1"></a-plane>
             <a-plane onclick="changeAva('frequencia')" class="button" visible="false" scale="0.09 0.13 1" position="0.227 0.287 0.1"></a-plane>
         </a-image>
+
+        <!-- QUADRO -->
+        <a-entity gltf-model=""></a-entity>
 
         <!-- SCRIPT -->
         <script src="/Js/main.js"></script>
