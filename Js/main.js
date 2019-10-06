@@ -34,6 +34,7 @@ function moveTo(x, y, z) {
 function changeSlide(diference) {
     if ((diference < 0 && slideNumber >=1) || (diference > 0 && slideNumber < 6)) {
         slideNumber += diference;
+        document.getElementById("computerImage").setAttribute("color", "");
         document.getElementById("slideImage").setAttribute("src", "Assets/Imagens/Slide"+slideNumber+".PNG");
         document.getElementById("computerImage").setAttribute("src", "Assets/Imagens/Slide"+slideNumber+".PNG");
     }

@@ -36,6 +36,36 @@
             onclick="moveTo(0, 0, 1.8)">
             <a-torus rotation="90 0 0" radius=".1" radius-tubular="0.005" position="0 -.5 0" color="#000"></a-torus>
         </a-cylinder>
+        <a-cylinder id="nodeChair2" class="movNode" src="#node" color="#000000" transparent="true"
+            height="1" radius=".2" open-ended="true" position="0 .6 3.583"
+            animation="property: opacity; to: .5; from: 1; dur:800; loop:true; dir: alternate"
+            onclick="moveTo(0, 0, 3.583)">
+            <a-torus rotation="90 0 0" radius=".1" radius-tubular="0.005" position="0 -.5 0" color="#000"></a-torus>
+        </a-cylinder>
+        <a-cylinder id="nodeChair3" class="movNode" src="#node" color="#000000" transparent="true"
+            height="1" radius=".2" open-ended="true" position="0 .6 0.124"
+            animation="property: opacity; to: .5; from: 1; dur:800; loop:true; dir: alternate"
+            onclick="moveTo(0, 0, 0.124)">
+            <a-torus rotation="90 0 0" radius=".1" radius-tubular="0.005" position="0 -.5 0" color="#000"></a-torus>
+        </a-cylinder>
+        <a-cylinder id="nodeChair4" class="movNode" src="#node" color="#000000" transparent="true"
+            height="1" radius=".2" open-ended="true" position="2.270 .6 3.583"
+            animation="property: opacity; to: .5; from: 1; dur:800; loop:true; dir: alternate"
+            onclick="moveTo(2.27, 0, 3.583)">
+            <a-torus rotation="90 0 0" radius=".1" radius-tubular="0.005" position="0 -.5 0" color="#000"></a-torus>
+        </a-cylinder>
+        <a-cylinder id="nodeChair5" class="movNode" src="#node" color="#000000" transparent="true"
+            height="1" radius=".2" open-ended="true" position="2.270 .6 1.8"
+            animation="property: opacity; to: .5; from: 1; dur:800; loop:true; dir: alternate"
+            onclick="moveTo(2.27, 0, 1.8)">
+            <a-torus rotation="90 0 0" radius=".1" radius-tubular="0.005" position="0 -.5 0" color="#000"></a-torus>
+        </a-cylinder>
+        <a-cylinder id="nodeChair6" class="movNode" src="#node" color="#000000" transparent="true"
+            height="1" radius=".2" open-ended="true" position="2.270 .6 0.124"
+            animation="property: opacity; to: .5; from: 1; dur:800; loop:true; dir: alternate"
+            onclick="moveTo(2.27, 0, 0.124)">
+            <a-torus rotation="90 0 0" radius=".1" radius-tubular="0.005" position="0 -.5 0" color="#000"></a-torus>
+        </a-cylinder>
 
         <!-- NODE PROFESSOR -->
         <a-cylinder id="nodeProfessor" class="movNode" src="#node" color="#000000" transparent="true"
@@ -62,7 +92,7 @@
 
         <!-- SLIDE -->
         <a-image id="slideImage" height="1.5" width="2" position="-4.325 2.02 1.145" rotation="0 90 0"></a-image>
-        <a-image id="computerImage" height="0.452" width="0.5" position="-2.653 1.445 3.32" rotation="0 235.180 0"></a-image>
+        <a-image color="black" id="computerImage" height="0.452" width="0.5" position="-2.653 1.445 3.32" rotation="0 235.180 0"></a-image>
         <a-entity class="button" onclick="changeSlide(1)" gltf-model="/Assets/Models/controle_slide/model.gltf" position="-2.982 1.120 3.10" scale="0.07 0.07 0.07" rotation="0 45 0"></a-entity>
         <a-entity class="button" onclick="changeSlide(-1)" gltf-model="/Assets/Models/controle_slide/model.gltf" position="-2.958 1.120 3.35" scale="0.07 0.07 0.07" rotation="0 225 0"></a-entity>
         <!-- FIM SLIDE -->
